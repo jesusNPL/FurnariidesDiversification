@@ -505,7 +505,7 @@ run_PaleoEnv <- function (tree_file, env_data_file, sampling_fraction=1, number_
 
 		#finaltree_file[[i]]<-results
 		#print(results)
-}, mc.cores =  mc.cores = {parallel::detectCores() - 1L} )
+}, mc.cores = {parallel::detectCores() - 1L} )
 
 	final_table_tree_file<-tables.summary(finaltree_file)
 
