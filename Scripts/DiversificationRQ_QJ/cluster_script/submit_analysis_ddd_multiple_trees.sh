@@ -9,4 +9,4 @@ module load ompi/intel
 
 cd ~/projects/FurDiversification/Scripts/DiversificationRQ_QJ
 
-R --no-save -q < runAnalysis.R
+R --no-save -q < run_analysis_ddd_multiple_trees.R
