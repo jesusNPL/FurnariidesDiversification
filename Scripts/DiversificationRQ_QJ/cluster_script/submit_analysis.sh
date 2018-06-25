@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#PBS -l walltime=4:00:00,nodes=1:ppn=4,mem=12gb
+#PBS -l walltime=24:00:00,nodes=1:ppn=16,mem=24gb
 #PBS -N j
 #PBS -m abe
 #PBS -M meireles@umn.edu
@@ -7,6 +7,6 @@ module load R/3.3.3
 module load intel
 module load ompi/intel
 
-cd ~/projects/FurDiversification/DiversificationRQ_QJ
+cd ~/projects/FurDiversification/Scripts/DiversificationRQ_QJ
 
-R --no-save -q < R/runAnalysis.R
+R --no-save -q < runAnalysis.R
