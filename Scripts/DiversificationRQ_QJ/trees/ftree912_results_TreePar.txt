@@ -1,0 +1,6 @@
+means.Model	means.NP	means.logL	means.AICc	means.DivRate1	means.Turnover1	means.ShiftTime1	means.DivRate2	means.Turnover2	means.ShiftTime2	means.DivRate3	means.Turnover3	means.ShiftTime3	means.DivRate4	means.Turnover4	means.ShiftTime4	means.DivRate5	means.Turnover5	std.err.Model	std.err.NP	std.err.logL	std.err.AICc	std.err.DivRate1	std.err.Turnover1	std.err.ShiftTime1	std.err.DivRate2	std.err.Turnover2	std.err.ShiftTime2	std.err.DivRate3	std.err.Turnover3	std.err.ShiftTime3	std.err.DivRate4	std.err.Turnover4	std.err.ShiftTime4	std.err.DivRate5	std.err.Turnover5
+NoShiftTime	2	-45.8867	96.864	0.063	0	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NoShiftTime	2	0	0	0	0	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+1ShiftTime	5	-38.0952	93.69	0.0086	0.0466	9	0.0241	0.9124	NA	NA	NA	NA	NA	NA	NA	NA	NA	1ShiftTime	5	0	0	0	0	0	0	0	NA	NA	NA	NA	NA	NA	NA	NA	NA
+2ShiftTimes	8	-36.9643	118.729	1e-04	0.0803	6	0.0255	0.0941	9	0.0191	0.9315	NA	NA	NA	NA	NA	NA	2ShiftTimes	8	0	0	0	0	0	0	0	0	0	0	NA	NA	NA	NA	NA	NA
+3ShiftTimes	11	-35.8871	225.774	1e-04	0.0763	6	0.0584	0.3016	7	1e-04	0.0228	9	0.0195	0.932	NA	NA	NA	3ShiftTimes	11	0	0	0	0	0	0	0	0	0	0	0	0	0	NA	NA	NA
+4ShiftTimes	14	-35.1194	-315.81	1e-04	0.0766	6	0.0671	0.232	7	1e-04	0.0549	9	0.0204	0.9327	21	1e-04	0.9316	4ShiftTimes	14	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0

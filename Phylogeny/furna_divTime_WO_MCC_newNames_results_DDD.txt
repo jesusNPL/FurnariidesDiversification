@@ -1,0 +1,7 @@
+means.Model	means.NP	means.logL	means.AICc	means.Lambda	means.Mu	means.K	means.r	std.err.Model	std.err.NP	std.err.logL	std.err.AICc	std.err.Lambda	std.err.Mu	std.err.K	std.err.r
+DDL	2	-1947.2419	3898.504	0.1803	NA	953.48	NA	DDL	2	NA	NA	NA	NA	NA	NA
+DDL+E	3	-1947.2634	3900.567	0.1799	0.00019	953.51	NA	DDL+E	3	NA	NA	NA	NA	NA	NA
+DDX+E	NA	NA	NA	NA	NA	NA	NA	DDX+E	NA	NA	NA	NA	NA	NA	NA
+DD+EL	-1	-1	0	-1	-1	-1	NA	DD+EL	-1	NA	NA	NA	NA	NA	NA
+DD+EX	NA	NA	NA	NA	NA	NA	NA	DD+EX	NA	NA	NA	NA	NA	NA	NA
+DDL+EL	4	-1963.7805	3935.628	0.2796	0.05279	685	0.001	DDL+EL	4	NA	NA	NA	NA	NA	NA
