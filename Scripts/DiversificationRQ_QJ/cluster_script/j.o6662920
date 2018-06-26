@@ -1,0 +1,21 @@
+> source("run_diversification_analyses.R")
+> 
+> mcctree    = "../../Phylogeny/furna_divTime_WO_MCC_newNames.nex"
+> 
+> run_DDD(mcctree, total_richness = 685, number_of_trees = 1)
+[1] 1
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -2043.332 
+
+ Maximum likelihood parameter estimates: lambda: 0.180326, mu: 0.000000, K: 953.479242 
+ Maximum loglikelihood: -1947.241903 
+     lambda mu        K    loglik df conv
+1 0.1803256  0 953.4792 -1947.242  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -1979.839 
