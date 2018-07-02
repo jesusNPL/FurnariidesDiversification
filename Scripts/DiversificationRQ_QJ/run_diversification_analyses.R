@@ -644,12 +644,14 @@ run_DDD<-function(tree_file, total_richness=Ntip(tree_file), number_of_trees=1)
 
     final_table_tree_file<-tables.summary(final)
 
-    fname <- no.extension(basename(tree_file_name))
+    fname   <- no.extension(basename(tree_file_name))
     outfile <- paste(dirname(tree_file_name), "/", fname, "_results_DDD.txt", sep="")
-    out_R <- paste(dirname(tree_file_name), "/", fname, "_complete_results_DDD.Rdata", sep="")
+    out_R   <- paste(dirname(tree_file_name), "/", fname, "_complete_results_DDD.Rdata", sep="")
+    out_raw <- paste(dirname(final), "/", fname, "_RAW_results_DDD.rds", sep="")
 
     write.table(final_table_tree_file,file=outfile,quote=FALSE,sep="\t",row.names=FALSE)
     save(final_table_tree_file,file=out_R)
+    saveRDS(final, out_raw)
 
     print(final_table_tree_file)
     print("Analyses with the diversity-dependent (DDD) models completed ! Check your results in the working directory.")
