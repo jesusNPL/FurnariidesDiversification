@@ -1,0 +1,2942 @@
+> source("run_diversification_analyses.R")
+> library("ape")
+> 
+> 
+> path_trees = c(#"trees/ftree627.nex",
++                "trees/ftree632.nex",
++                "trees/ftree635.nex",
++                "trees/ftree641.nex",
++                "trees/ftree768.nex",
++                "trees/ftree912.nex")
+> 
+> ## Number of tips per subtree
+> tree_sizes = sapply(path_trees, function(x){
++     Ntip(read.nexus(x)[[1]])
++ })
+> 
+> ## Percentage of species sampled per subtree
+> sampling_fraction = 0.9
+> 
+> ## Observed + Unobserved richness per subclade
+> total_richness = tree_sizes + ceiling(tree_sizes * (1 - sampling_fraction) )
+> 
+> mapply(run_DDD,
++        tree_file       = path_trees,
++        total_richness  = total_richness,
++        number_of_trees = 20)
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] "Linear dependence of speciation rate without extinction"
+[1] 10
+[1] "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+[1] 11
+[1] "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+[1][1] "Linear dependence of speciation rate without extinction" 12
+
+[1] 13
+[1] "Linear dependence of speciation rate without extinction"
+[1] 14
+[1] "Linear dependence of speciation rate without extinction"
+[1] 15
+[1] 16
+[1] "Linear dependence of speciation rate without extinction"
+[1] 17
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 18
+You are optimizingYou are optimizing  lambdalambda  KK  
+
+You are fixingYou are optimizing You are fixing mu lambda mu You are optimizing
+ K You are optimizingOptimizing the likelihood - this may take a while.
+ lambda  
+Optimizing the likelihood - this may take a while. lambda
+ K You are fixing
+ K 
+ muYou are optimizing
+ You are fixingYou are optimizing 
+ You are fixing lambda[1]Optimizing the likelihood - this may take a while.mu lambdaYou are optimizing   mu  "Linear dependence of speciation rate without extinction" K
+
+ K
+lambda 
+Optimizing the likelihood - this may take a while.  
+ Optimizing the likelihood - this may take a while.
+K
+You are fixingYou are optimizing   You are fixing 
+
+mu lambda mu 
+You are fixing KOptimizing the likelihood - this may take a while. 
+  muOptimizing the likelihood - this may take a while.
+
+  
+
+You are fixingOptimizing the likelihood - this may take a while.  mu
+ 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 19
+[1] "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+[1] 20
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -903.6495 
+The loglikelihood for the initial parameter values is -904.0843 
+The loglikelihood for the initial parameter values is -904.6847 
+The loglikelihood for the initial parameter values is -904.6106 
+The loglikelihood for the initial parameter values is -904.4127 
+The loglikelihood for the initial parameter values isThe loglikelihood for the initial parameter values is  -903.8748 
+-904.4261 
+The loglikelihood for the initial parameter values is -904.4786 
+The loglikelihood for the initial parameter values is -904.8012 
+The loglikelihood for the initial parameter values is -903.7701 
+The loglikelihood for the initial parameter values is -903.6557 
+The loglikelihood for the initial parameter values is -904.209 
+The loglikelihood for the initial parameter values is -905.0718 
+The loglikelihood for the initial parameter values is -903.4594 
+The loglikelihood for the initial parameter values is -904.82 
+The loglikelihood for the initial parameter values is -905.3783 
+The loglikelihood for the initial parameter values is -906.0599 
+The loglikelihood for the initial parameter values is -903.9437 
+The loglikelihood for the initial parameter values is -906.371 
+The loglikelihood for the initial parameter values is -904.3764 
+
+ Maximum likelihood parameter estimates: lambda: 0.299588, mu: 0.000000, K: 365.682786 
+ Maximum loglikelihood: -870.206208 
+     lambda mu        K    loglik df conv
+1 0.2995875  0 365.6828 -870.2062  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.299588, mu: 0.000000, K: 365.682786 
+ Maximum loglikelihood: -871.897080 
+     lambda mu        K    loglik df conv
+1 0.2995875  0 365.6828 -871.8971  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.299588, mu: 0.000000, K: 365.682786 
+ Maximum loglikelihood: -870.971053 
+     lambda mu        K    loglik df conv
+1 0.2995875  0 365.6828 -870.9711  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -869.019 
+The loglikelihood for the initial parameter values is -871.2331 
+The loglikelihood for the initial parameter values is -868.8205 
+
+ Maximum likelihood parameter estimates: lambda: 0.198623, mu: 0.000000, K: 487.020531 
+ Maximum loglikelihood: -857.818155 
+     lambda mu        K    loglik df conv
+1 0.1986233  0 487.0205 -857.8182  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -869.5044 
+
+ Maximum likelihood parameter estimates: lambda: 0.201795, mu: 0.000000, K: 472.476021 
+ Maximum loglikelihood: -858.330063 
+     lambda mu       K    loglik df conv
+1 0.2017955  0 472.476 -858.3301  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -870.7796 
+
+ Maximum likelihood parameter estimates: lambda: 0.201083, mu: 0.000000, K: 476.176631 
+ Maximum loglikelihood: -857.802044 
+     lambda mu        K   loglik df conv
+1 0.2010828  0 476.1766 -857.802  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -870.0637 
+
+ Maximum likelihood parameter estimates: lambda: 0.200927, mu: 0.000000, K: 474.216036 
+ Maximum loglikelihood: -858.564381 
+     lambda mu       K    loglik df conv
+1 0.2009269  0 474.216 -858.5644  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.202689, mu: 0.000000, K: 467.803310 
+ Maximum loglikelihood: -858.459904 
+     lambda mu        K    loglik df conv
+1 0.2026886  0 467.8033 -858.4599  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.200927, mu: 0.000000, K: 474.216036 
+ Maximum loglikelihood: -858.526826 
+     lambda mu       K    loglik df conv
+1 0.2009269  0 474.216 -858.5268  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -870.7338 
+The loglikelihood for the initial parameter values is -871.1008 
+The loglikelihood for the initial parameter values is -870.7064 
+
+ Maximum likelihood parameter estimates: lambda: 0.201375, mu: 0.000000, K: 475.762459 
+ Maximum loglikelihood: -857.654211 
+     lambda mu        K    loglik df conv
+1 0.2013755  0 475.7625 -857.6542  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -869.9915 
+
+ Maximum likelihood parameter estimates: lambda: 0.199802, mu: 0.000000, K: 480.045908 
+ Maximum loglikelihood: -858.210610 
+     lambda mu        K    loglik df conv
+1 0.1998016  0 480.0459 -858.2106  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.200551, mu: 0.000000, K: 477.746162 
+ Maximum loglikelihood: -858.142956 
+     lambda mu        K   loglik df conv
+1 0.2005506  0 477.7462 -858.143  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.198463, mu: 0.000000, K: 487.776442 
+ Maximum loglikelihood: -857.705407 
+     lambda mu        K    loglik df conv
+1 0.1984628  0 487.7764 -857.7054  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.200781, mu: 0.000000, K: 477.954469 
+ Maximum loglikelihood: -857.655728 
+    lambda mu        K    loglik df conv
+1 0.200781  0 477.9545 -857.6557  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -870.1305 
+The loglikelihood for the initial parameter values is -870.1789 
+
+ Maximum likelihood parameter estimates: lambda: 0.199904, mu: 0.000000, K: 480.056273 
+ Maximum loglikelihood: -858.093747 
+     lambda mu        K    loglik df conv
+1 0.1999045  0 480.0563 -858.0937  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -869.2131 
+The loglikelihood for the initial parameter values is -869.8373 
+
+ Maximum likelihood parameter estimates: lambda: 0.202022, mu: 0.000000, K: 471.640292 
+ Maximum loglikelihood: -858.196675 
+     lambda mu        K    loglik df conv
+1 0.2020222  0 471.6403 -858.1967  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.199879, mu: 0.000000, K: 481.250974 
+ Maximum loglikelihood: -857.852325 
+     lambda mu       K    loglik df conv
+1 0.1998788  0 481.251 -857.8523  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.199466, mu: 0.000000, K: 481.518156 
+ Maximum loglikelihood: -858.181351 
+     lambda mu        K    loglik df conv
+1 0.1994664  0 481.5182 -858.1814  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -869.9547 
+
+ Maximum likelihood parameter estimates: lambda: 0.200359, mu: 0.000000, K: 478.929169 
+ Maximum loglikelihood: -857.842742 
+    lambda mu        K    loglik df conv
+1 0.200359  0 478.9292 -857.8427  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.200875, mu: 0.000000, K: 476.402058 
+ Maximum loglikelihood: -858.037373 
+     lambda mu        K    loglik df conv
+1 0.2008754  0 476.4021 -858.0374  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -870.6658 
+The loglikelihood for the initial parameter values is -869.7611 
+The loglikelihood for the initial parameter values is -869.968 
+The loglikelihood for the initial parameter values is -869.8819 
+The loglikelihood for the initial parameter values is -870.23 
+
+ Maximum likelihood parameter estimates: lambda: 0.198455, mu: 0.000159, K: 479.597581 
+ Maximum loglikelihood: -859.602294 
+     lambda           mu        K    loglik df conv
+1 0.1984553 0.0001587232 479.5976 -859.6023  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.197021, mu: 0.000044, K: 495.836529 
+ Maximum loglikelihood: -857.999289 
+     lambda           mu        K    loglik df conv
+1 0.1970213 4.384218e-05 495.8365 -857.9993  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.197535, mu: 0.000000, K: 490.529284 
+ Maximum loglikelihood: -857.701313 
+    lambda           mu        K    loglik df conv
+1 0.197535 2.868063e-07 490.5293 -857.7013  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -941.6723 
+
+ Maximum likelihood parameter estimates: lambda: 0.206706, mu: 0.000266, K: 465.614937 
+ Maximum loglikelihood: -857.701560 
+     lambda           mu        K    loglik df conv
+1 0.2067057 0.0002655794 465.6149 -857.7016  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -935.2689 
+The loglikelihood for the initial parameter values is -936.5197 
+
+ Maximum likelihood parameter estimates: lambda: 0.200826, mu: 0.000038, K: 478.639176 
+ Maximum loglikelihood: -858.213313 
+     lambda           mu        K    loglik df conv
+1 0.2008264 3.756482e-05 478.6392 -858.2133  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.195886, mu: 0.000019, K: 485.479735 
+ Maximum loglikelihood: -858.384688 
+     lambda           mu        K    loglik df conv
+1 0.1958858 1.923897e-05 485.4797 -858.3847  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.200765, mu: 0.000021, K: 477.655635 
+ Maximum loglikelihood: -858.143870 
+    lambda          mu        K    loglik df conv
+1 0.200765 2.06919e-05 477.6556 -858.1439  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.201785, mu: 0.000071, K: 468.718434 
+ Maximum loglikelihood: -858.464936 
+     lambda           mu        K    loglik df conv
+1 0.2017851 7.119581e-05 468.7184 -858.4649  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.200173, mu: 0.000021, K: 480.356525 
+ Maximum loglikelihood: -858.094738 
+     lambda           mu        K    loglik df conv
+1 0.2001725 2.064718e-05 480.3565 -858.0947  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.199555, mu: 0.000004, K: 483.183283 
+ Maximum loglikelihood: -857.817419 
+     lambda           mu        K    loglik df conv
+1 0.1995551 4.490281e-06 483.1833 -857.8174  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.201001, mu: 0.000001, K: 475.201245 
+ Maximum loglikelihood: -858.526803 
+     lambda           mu        K    loglik df conv
+1 0.2010008 1.455224e-06 475.2012 -858.5268  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.201001, mu: 0.000001, K: 475.201245 
+ Maximum loglikelihood: -858.564491 
+     lambda           mu        K    loglik df conv
+1 0.2010008 1.455224e-06 475.2012 -858.5645  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.199713, mu: 0.000002, K: 479.957258 
+ Maximum loglikelihood: -858.181695 
+     lambda           mu        K    loglik df conv
+1 0.1997129 2.077941e-06 479.9573 -858.1817  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -940.4758 
+
+ Maximum likelihood parameter estimates: lambda: 0.201092, mu: 0.000003, K: 474.072021 
+ Maximum loglikelihood: -858.198065 
+     lambda           mu       K    loglik df conv
+1 0.2010925 2.968378e-06 474.072 -858.1981  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.200179, mu: 0.000028, K: 480.943135 
+ Maximum loglikelihood: -857.657980 
+    lambda           mu        K   loglik df conv
+1 0.200179 2.786783e-05 480.9431 -857.658  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.201423, mu: 0.000043, K: 475.147265 
+ Maximum loglikelihood: -857.803743 
+     lambda           mu        K    loglik df conv
+1 0.2014226 4.258581e-05 475.1473 -857.8037  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -940.0012 
+The loglikelihood for the initial parameter values is -942.5071 
+
+ Maximum likelihood parameter estimates: lambda: 0.198457, mu: 0.000005, K: 486.971206 
+ Maximum loglikelihood: -857.705600 
+     lambda           mu        K    loglik df conv
+1 0.1984566 4.508096e-06 486.9712 -857.7056  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -940.4351 
+The loglikelihood for the initial parameter values is -943.6702 
+The loglikelihood for the initial parameter values is -939.6585 
+The loglikelihood for the initial parameter values is -938.1789 
+The loglikelihood for the initial parameter values is -941.7078 
+The loglikelihood for the initial parameter values is -941.8404 
+
+ Maximum likelihood parameter estimates: lambda: 0.199715, mu: 0.000001, K: 481.731661 
+ Maximum loglikelihood: -857.852416 
+     lambda         mu        K    loglik df conv
+1 0.1997153 1.1212e-06 481.7317 -857.8524  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -939.4875 
+
+ Maximum likelihood parameter estimates: lambda: 0.201138, mu: 0.000004, K: 476.136610 
+ Maximum loglikelihood: -858.037616 
+     lambda           mu        K    loglik df conv
+1 0.2011384 3.588432e-06 476.1366 -858.0376  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -942.3025 
+
+ Maximum likelihood parameter estimates: lambda: 0.200480, mu: 0.000007, K: 479.216806 
+ Maximum loglikelihood: -857.843050 
+     lambda           mu        K    loglik df conv
+1 0.2004798 6.540639e-06 479.2168 -857.8431  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -939.7656 
+The loglikelihood for the initial parameter values is -940.4534 
+The loglikelihood for the initial parameter values is -937.2768 
+The loglikelihood for the initial parameter values is -939.167 
+The loglikelihood for the initial parameter values is -940.7417 
+The loglikelihood for the initial parameter values is -939.7103 
+[1] "Analyses with the diversity-dependent (DDD) models completed ! Check your results in the working directory."
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] 10
+[1] 11
+[1] 12
+[1] 13
+[1] 14
+[1] 15
+[1] 16
+[1] 17
+[1] 18
+[1] 19
+[1] 20
+[1][1] "Linear dependence of speciation rate without extinction" "Linear dependence of speciation rate without extinction"
+
+[1][1] "Linear dependence of speciation rate without extinction"
+ "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+[1][1] "Linear dependence of speciation rate without extinction"
+ "Linear dependence of speciation rate without extinction"
+[1][1][1] "Linear dependence of speciation rate without extinction"
+ "Linear dependence of speciation rate without extinction"[1]
+ "Linear dependence of speciation rate without extinction"
+ "Linear dependence of speciation rate without extinction"[1]
+[1][1] "Linear dependence of speciation rate without extinction"
+ "Linear dependence of speciation rate without extinction"
+ "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+[1][1] "Linear dependence of speciation rate without extinction"
+ "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are optimizingYou are fixing  lambdaYou are optimizingmu   You are optimizingKYou are optimizinglambda
+You are optimizing    Optimizing the likelihood - this may take a while. lambdaYou are optimizing
+lambdaK lambda    You are fixing
+ You are optimizingKlambdaK
+ K    mu You are optimizingYou are fixinglambda
+K
+ 
+    You are fixing
+You are fixinglambdamuYou are fixingK
+  Optimizing the likelihood - this may take a while.    You are optimizingmumuYou are fixing K
+mu
+You are optimizing    
+  Optimizing the likelihood - this may take a while. You are fixinglambda
+
+muYou are optimizing
+
+ lambda  Optimizing the likelihood - this may take a while. Optimizing the likelihood - this may take a while. 
+You are fixingOptimizing the likelihood - this may take a while. muK 
+ lambda  KYou are optimizing  
+
+Optimizing the likelihood - this may take a while. mu
+  
+You are optimizing
+ K 
+You are optimizinglambdaOptimizing the likelihood - this may take a while.You are optimizing 
+ You are fixing
+ You are fixing   lambda
+ lambda K
+lambda Optimizing the likelihood - this may take a while.mu You are fixingmu  K  K  
+K 
+
+ mu
+ 
+You are fixing
+Optimizing the likelihood - this may take a while.You are fixing 
+Optimizing the likelihood - this may take a while.   You are fixing
+ muYou are fixing
+mu Optimizing the likelihood - this may take a while.
+   mu 
+mu
+ 
+ Optimizing the likelihood - this may take a while.
+Optimizing the likelihood - this may take a while.Optimizing the likelihood - this may take a while.
+   
+Optimizing the likelihood - this may take a while.
+
+ 
+The loglikelihood for the initial parameter values is -678.7743 
+The loglikelihood for the initial parameter values is -680.9055 
+The loglikelihood for the initial parameter values is -681.7964 
+The loglikelihood for the initial parameter values is -680.7941 
+The loglikelihood for the initial parameter values is -680.764 
+The loglikelihood for the initial parameter values is -680.036 
+The loglikelihood for the initial parameter values is -682.0844 
+The loglikelihood for the initial parameter values is -680.749 
+The loglikelihood for the initial parameter values is -679.8758 
+The loglikelihood for the initial parameter values is -680.2209 
+The loglikelihood for the initial parameter values is -679.1819 
+The loglikelihood for the initial parameter values is -680.1845 
+The loglikelihood for the initial parameter values is -681.0192 
+The loglikelihood for the initial parameter values is -680.4409 
+The loglikelihood for the initial parameter values is -679.0887 
+The loglikelihood for the initial parameter values is -679.5742 
+The loglikelihood for the initial parameter values is -680.2283 
+The loglikelihood for the initial parameter values is -680.1553 
+The loglikelihood for the initial parameter values is -680.808 
+The loglikelihood for the initial parameter values is -679.7061 
+
+ Maximum likelihood parameter estimates: lambda: 0.333434, mu: 0.000000, K: 272.142225 
+ Maximum loglikelihood: -655.549482 
+     lambda mu        K    loglik df conv
+1 0.3334335  0 272.1422 -655.5495  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.333434, mu: 0.000000, K: 272.142225 
+ Maximum loglikelihood: -654.097537 
+     lambda mu        K    loglik df conv
+1 0.3334335  0 272.1422 -654.0975  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -656.0457 
+The loglikelihood for the initial parameter values is -655.267 
+
+ Maximum likelihood parameter estimates: lambda: 0.222137, mu: 0.000000, K: 363.795286 
+ Maximum loglikelihood: -644.505055 
+     lambda mu        K    loglik df conv
+1 0.2221366  0 363.7953 -644.5051  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -654.6014 
+
+ Maximum likelihood parameter estimates: lambda: 0.225907, mu: 0.000000, K: 354.180206 
+ Maximum loglikelihood: -644.714515 
+     lambda mu        K    loglik df conv
+1 0.2259067  0 354.1802 -644.7145  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.223020, mu: 0.000000, K: 361.301196 
+ Maximum loglikelihood: -644.098856 
+     lambda mu        K    loglik df conv
+1 0.2230196  0 361.3012 -644.0989  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -655.674 
+The loglikelihood for the initial parameter values is -654.4304 
+
+ Maximum likelihood parameter estimates: lambda: 0.218267, mu: 0.000000, K: 376.704756 
+ Maximum loglikelihood: -643.838720 
+     lambda mu        K    loglik df conv
+1 0.2182672  0 376.7048 -643.8387  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -653.454 
+
+ Maximum likelihood parameter estimates: lambda: 0.218113, mu: 0.000000, K: 371.054098 
+ Maximum loglikelihood: -645.559649 
+     lambda mu        K    loglik df conv
+1 0.2181135  0 371.0541 -645.5596  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.222972, mu: 0.000000, K: 356.056216 
+ Maximum loglikelihood: -646.074201 
+     lambda mu        K    loglik df conv
+1 0.2229716  0 356.0562 -646.0742  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -654.9846 
+The loglikelihood for the initial parameter values is -656.5012 
+
+ Maximum likelihood parameter estimates: lambda: 0.216436, mu: 0.000000, K: 380.016506 
+ Maximum loglikelihood: -644.343259 
+    lambda mu        K    loglik df conv
+1 0.216436  0 380.0165 -644.3433  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -653.4644 
+
+ Maximum likelihood parameter estimates: lambda: 0.224913, mu: 0.000000, K: 357.118992 
+ Maximum loglikelihood: -644.196862 
+     lambda mu       K    loglik df conv
+1 0.2249132  0 357.119 -644.1969  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -654.901 
+
+ Maximum likelihood parameter estimates: lambda: 0.220833, mu: 0.000000, K: 366.897639 
+ Maximum loglikelihood: -644.330598 
+     lambda mu        K    loglik df conv
+1 0.2208333  0 366.8976 -644.3306  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.222315, mu: 0.000000, K: 361.987657 
+ Maximum loglikelihood: -644.706782 
+     lambda mu        K    loglik df conv
+1 0.2223146  0 361.9877 -644.7068  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -654.3111 
+The loglikelihood for the initial parameter values is -654.9067 
+
+ Maximum likelihood parameter estimates: lambda: 0.222914, mu: 0.000000, K: 361.640154 
+ Maximum loglikelihood: -644.331080 
+     lambda mu        K    loglik df conv
+1 0.2229136  0 361.6402 -644.3311  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.221300, mu: 0.000000, K: 367.216412 
+ Maximum loglikelihood: -643.803435 
+  lambda mu        K    loglik df conv
+1 0.2213  0 367.2164 -643.8034  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -654.6435 
+
+ Maximum likelihood parameter estimates: lambda: 0.219949, mu: 0.000000, K: 368.679401 
+ Maximum loglikelihood: -644.588734 
+     lambda mu        K    loglik df conv
+1 0.2199488  0 368.6794 -644.5887  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.224896, mu: 0.000000, K: 352.116628 
+ Maximum loglikelihood: -645.942452 
+     lambda mu        K    loglik df conv
+1 0.2248955  0 352.1166 -645.9425  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -653.8709 
+The loglikelihood for the initial parameter values is -654.3386 
+
+ Maximum likelihood parameter estimates: lambda: 0.225746, mu: 0.000000, K: 354.752270 
+ Maximum loglikelihood: -644.065152 
+     lambda mu        K    loglik df conv
+1 0.2257464  0 354.7523 -644.0652  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -656.7102 
+The loglikelihood for the initial parameter values is -654.9819 
+
+ Maximum likelihood parameter estimates: lambda: 0.221348, mu: 0.000000, K: 366.382752 
+ Maximum loglikelihood: -644.084743 
+     lambda mu        K    loglik df conv
+1 0.2213482  0 366.3828 -644.0847  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.218431, mu: 0.000000, K: 375.259015 
+ Maximum loglikelihood: -643.925707 
+     lambda mu       K    loglik df conv
+1 0.2184308  0 375.259 -643.9257  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -654.0992 
+The loglikelihood for the initial parameter values is -653.4124 
+
+ Maximum likelihood parameter estimates: lambda: 0.219653, mu: 0.000000, K: 370.611188 
+ Maximum loglikelihood: -644.218110 
+     lambda mu        K    loglik df conv
+1 0.2196531  0 370.6112 -644.2181  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -653.9224 
+
+ Maximum likelihood parameter estimates: lambda: 0.204759, mu: 0.001191, K: 405.524704 
+ Maximum loglikelihood: -644.534236 
+     lambda          mu        K    loglik df conv
+1 0.2047593 0.001191128 405.5247 -644.5342  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -696.6126 
+
+ Maximum likelihood parameter estimates: lambda: 0.223585, mu: 0.000097, K: 359.269213 
+ Maximum loglikelihood: -644.678133 
+    lambda           mu        K    loglik df conv
+1 0.223585 9.666351e-05 359.2692 -644.6781  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.225156, mu: 0.000402, K: 355.145193 
+ Maximum loglikelihood: -644.207305 
+     lambda           mu        K    loglik df conv
+1 0.2251562 0.0004018148 355.1452 -644.2073  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.221555, mu: 0.000071, K: 359.159041 
+ Maximum loglikelihood: -645.777478 
+     lambda           mu       K    loglik df conv
+1 0.2215555 7.139294e-05 359.159 -645.7775  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.217771, mu: 0.000978, K: 372.137589 
+ Maximum loglikelihood: -644.761660 
+     lambda          mu        K    loglik df conv
+1 0.2177709 0.000978261 372.1376 -644.7617  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.220885, mu: 0.000242, K: 370.175088 
+ Maximum loglikelihood: -643.843423 
+     lambda           mu        K    loglik df conv
+1 0.2208846 0.0002419763 370.1751 -643.8434  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.226561, mu: 0.000004, K: 351.498663 
+ Maximum loglikelihood: -644.713490 
+     lambda           mu        K    loglik df conv
+1 0.2265606 3.812371e-06 351.4987 -644.7135  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -703.0677 
+The loglikelihood for the initial parameter values is -702.472 
+The loglikelihood for the initial parameter values is -703.9139 
+The loglikelihood for the initial parameter values is -701.5529 
+
+ Maximum likelihood parameter estimates: lambda: 0.225204, mu: 0.000077, K: 356.536291 
+ Maximum loglikelihood: -644.068209 
+     lambda           mu        K    loglik df conv
+1 0.2252036 7.749843e-05 356.5363 -644.0682  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.219787, mu: 0.000085, K: 370.607449 
+ Maximum loglikelihood: -644.591515 
+     lambda           mu        K    loglik df conv
+1 0.2197867 8.472325e-05 370.6074 -644.5915  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.222710, mu: 0.000005, K: 361.672195 
+ Maximum loglikelihood: -644.505534 
+     lambda           mu        K    loglik df conv
+1 0.2227096 4.742985e-06 361.6722 -644.5055  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -697.3924 
+
+ Maximum likelihood parameter estimates: lambda: 0.223290, mu: 0.000040, K: 356.228502 
+ Maximum loglikelihood: -646.074905 
+     lambda           mu        K    loglik df conv
+1 0.2232898 4.008817e-05 356.2285 -646.0749  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.217985, mu: 0.000135, K: 370.658693 
+ Maximum loglikelihood: -645.562198 
+     lambda           mu        K    loglik df conv
+1 0.2179847 0.0001348785 370.6587 -645.5622  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.222804, mu: 0.000001, K: 362.476759 
+ Maximum loglikelihood: -644.098687 
+     lambda           mu        K    loglik df conv
+1 0.2228044 1.174543e-06 362.4768 -644.0987  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -704.476 
+
+ Maximum likelihood parameter estimates: lambda: 0.222940, mu: 0.000087, K: 364.066028 
+ Maximum loglikelihood: -644.088218 
+     lambda           mu       K    loglik df conv
+1 0.2229403 8.681039e-05 364.066 -644.0882  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.223992, mu: 0.000091, K: 354.283256 
+ Maximum loglikelihood: -645.945981 
+     lambda           mu        K   loglik df conv
+1 0.2239922 9.079134e-05 354.2833 -645.946  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -703.0609 
+The loglikelihood for the initial parameter values is -699.5293 
+
+ Maximum likelihood parameter estimates: lambda: 0.223087, mu: 0.000154, K: 363.477813 
+ Maximum loglikelihood: -643.808979 
+     lambda           mu        K   loglik df conv
+1 0.2230872 0.0001544857 363.4778 -643.809  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -700.8421 
+The loglikelihood for the initial parameter values is -704.9137 
+The loglikelihood for the initial parameter values is -699.9463 
+
+ Maximum likelihood parameter estimates: lambda: 0.222980, mu: 0.000002, K: 361.326923 
+ Maximum loglikelihood: -644.331140 
+     lambda           mu        K    loglik df conv
+1 0.2229801 1.606249e-06 361.3269 -644.3311  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -700.7967 
+The loglikelihood for the initial parameter values is -699.5725 
+The loglikelihood for the initial parameter values is -706.0531 
+The loglikelihood for the initial parameter values is -699.0826 
+
+ Maximum likelihood parameter estimates: lambda: 0.219305, mu: 0.000000, K: 371.437474 
+ Maximum loglikelihood: -644.218227 
+     lambda           mu        K    loglik df conv
+1 0.2193054 3.652475e-07 371.4375 -644.2182  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.218398, mu: 0.000026, K: 375.743854 
+ Maximum loglikelihood: -643.926240 
+     lambda           mu        K    loglik df conv
+1 0.2183975 2.609835e-05 375.7439 -643.9262  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.221112, mu: 0.000006, K: 365.978467 
+ Maximum loglikelihood: -644.330797 
+     lambda           mu        K    loglik df conv
+1 0.2211125 6.147031e-06 365.9785 -644.3308  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -701.1916 
+The loglikelihood for the initial parameter values is -698.5505 
+The loglikelihood for the initial parameter values is -697.0789 
+The loglikelihood for the initial parameter values is -699.8258 
+[1] "Analyses with the diversity-dependent (DDD) models completed ! Check your results in the working directory."
+[1] 2
+[1] 1
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] 10
+[1] 11
+[1] 12
+[1] "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+[1][1] "Linear dependence of speciation rate without extinction"
+ "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+[1] 13
+[1] "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+[1][1][1] "Linear dependence of speciation rate without extinction"
+ "Linear dependence of speciation rate without extinction"
+ "Linear dependence of speciation rate without extinction"
+[1] 14
+[1] "Linear dependence of speciation rate without extinction"
+[1] 15
+[1] "Linear dependence of speciation rate without extinction"
+[1] 16
+[1] "Linear dependence of speciation rate without extinction"
+[1] 17
+[1] "Linear dependence of speciation rate without extinction"
+[1] 18
+[1] "Linear dependence of speciation rate without extinction"
+[1] 19
+[1] "Linear dependence of speciation rate without extinction"
+[1] 20
+[1] "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda You are optimizingK  lambda
+ KYou are fixing  
+mu 
+Optimizing the likelihood - this may take a while. 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while.You are optimizing  
+lambda K You are optimizing
+ lambda K 
+You are fixing muYou are fixing  
+mu 
+Optimizing the likelihood - this may take a while. Optimizing the likelihood - this may take a while.
+ 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K You are optimizing
+ lambda You are fixingK  mu
+ 
+You are optimizingYou are fixingOptimizing the likelihood - this may take a while.   lambdamu
+  K
+ 
+Optimizing the likelihood - this may take a while. 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixingYou are optimizing  mulambda  
+K Optimizing the likelihood - this may take a while.
+ 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizingYou are optimizing  lambdalambda  KK  
+
+You are fixingYou are fixing  mumu  
+
+Optimizing the likelihood - this may take a while. Optimizing the likelihood - this may take a while.
+ 
+The loglikelihood for the initial parameter values is -305.3061 
+The loglikelihood for the initial parameter values is The loglikelihood for the initial parameter values is -304.292 
+-303.5511 
+The loglikelihood for the initial parameter values is -305.8968 
+The loglikelihood for the initial parameter values is -303.6141 
+The loglikelihood for the initial parameter values is -304.2161 
+The loglikelihood for the initial parameter values is -303.8917 
+The loglikelihood for the initial parameter values is -304.622 
+The loglikelihood for the initial parameter values is -303.5876 
+The loglikelihood for the initial parameter values is -304.6145 
+The loglikelihood for the initial parameter values is -304.29 
+The loglikelihood for the initial parameter values is -304.362 
+The loglikelihood for the initial parameter values is -303.614 
+The loglikelihood for the initial parameter values is -306.5606 
+The loglikelihood for the initial parameter values is -303.3884 
+The loglikelihood for the initial parameter values is -304.7454 
+The loglikelihood for the initial parameter values is -304.5478 
+The loglikelihood for the initial parameter values is -303.5487 
+The loglikelihood for the initial parameter values is -304.5569 
+The loglikelihood for the initial parameter values is -304.203 
+
+ Maximum likelihood parameter estimates: lambda: 0.312300, mu: 0.000000, K: 158.692066 
+ Maximum loglikelihood: -283.040475 
+     lambda mu        K    loglik df conv
+1 0.3122998  0 158.6921 -283.0405  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -293.0516 
+
+ Maximum likelihood parameter estimates: lambda: 0.318357, mu: 0.000000, K: 155.218554 
+ Maximum loglikelihood: -282.951030 
+     lambda mu        K   loglik df conv
+1 0.3183567  0 155.2186 -282.951  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.308295, mu: 0.000000, K: 159.382080 
+ Maximum loglikelihood: -284.197245 
+     lambda mu        K    loglik df conv
+1 0.3082951  0 159.3821 -284.1972  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.318070, mu: 0.000000, K: 154.615772 
+ Maximum loglikelihood: -283.405925 
+   lambda mu        K    loglik df conv
+1 0.31807  0 154.6158 -283.4059  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -293.3733 
+The loglikelihood for the initial parameter values is -293.835 
+The loglikelihood for the initial parameter values is -293.8656 
+
+ Maximum likelihood parameter estimates: lambda: 0.315603, mu: 0.000000, K: 156.674975 
+ Maximum loglikelihood: -283.062635 
+     lambda mu       K    loglik df conv
+1 0.3156027  0 156.675 -283.0626  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.314088, mu: 0.000000, K: 158.379557 
+ Maximum loglikelihood: -282.718267 
+     lambda mu        K    loglik df conv
+1 0.3140884  0 158.3796 -282.7183  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.299208, mu: 0.000000, K: 163.321738 
+ Maximum loglikelihood: -285.317443 
+     lambda mu        K    loglik df conv
+1 0.2992083  0 163.3217 -285.3174  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.315883, mu: 0.000000, K: 157.150599 
+ Maximum loglikelihood: -282.874494 
+     lambda mu        K    loglik df conv
+1 0.3158833  0 157.1506 -282.8745  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -293.3298 
+The loglikelihood for the initial parameter values is -292.8597 
+The loglikelihood for the initial parameter values is -294.4373 
+The loglikelihood for the initial parameter values is -293.1211 
+
+ Maximum likelihood parameter estimates: lambda: 0.301814, mu: 0.000000, K: 156.960006 
+ Maximum loglikelihood: -287.464350 
+     lambda mu      K    loglik df conv
+1 0.3018141  0 156.96 -287.4643  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -296.75 
+
+ Maximum likelihood parameter estimates: lambda: 0.304066, mu: 0.000000, K: 161.005108 
+ Maximum loglikelihood: -284.744449 
+     lambda mu        K    loglik df conv
+1 0.3040659  0 161.0051 -284.7444  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -294.0765 
+
+ Maximum likelihood parameter estimates: lambda: 0.307345, mu: 0.000000, K: 161.249516 
+ Maximum loglikelihood: -283.604843 
+     lambda mu        K    loglik df conv
+1 0.3073451  0 161.2495 -283.6048  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.307063, mu: 0.000000, K: 163.212370 
+ Maximum loglikelihood: -282.829500 
+     lambda mu        K    loglik df conv
+1 0.3070626  0 163.2124 -282.8295  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -293.2358 
+The loglikelihood for the initial parameter values is -292.4528 
+
+ Maximum likelihood parameter estimates: lambda: 0.304458, mu: 0.000000, K: 164.008602 
+ Maximum loglikelihood: -283.195615 
+     lambda mu        K    loglik df conv
+1 0.3044584  0 164.0086 -283.1956  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -292.6545 
+
+ Maximum likelihood parameter estimates: lambda: 0.304885, mu: 0.000000, K: 163.849710 
+ Maximum loglikelihood: -283.225890 
+     lambda mu        K    loglik df conv
+1 0.3048852  0 163.8497 -283.2259  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.314742, mu: 0.000000, K: 155.102272 
+ Maximum loglikelihood: -284.232016 
+     lambda mu        K   loglik df conv
+1 0.3147424  0 155.1023 -284.232  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -292.68 
+The loglikelihood for the initial parameter values is -294.3154 
+
+ Maximum likelihood parameter estimates: lambda: 0.314510, mu: 0.000000, K: 154.411079 
+ Maximum loglikelihood: -284.652333 
+     lambda mu        K    loglik df conv
+1 0.3145099  0 154.4111 -284.6523  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -294.8449 
+
+ Maximum likelihood parameter estimates: lambda: 0.308229, mu: 0.000000, K: 161.753183 
+ Maximum loglikelihood: -283.000435 
+     lambda mu        K    loglik df conv
+1 0.3082292  0 161.7532 -283.0004  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -292.693 
+
+ Maximum likelihood parameter estimates: lambda: 0.308450, mu: 0.000000, K: 161.088844 
+ Maximum loglikelihood: -283.242901 
+   lambda mu        K    loglik df conv
+1 0.30845  0 161.0888 -283.2429  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.319641, mu: 0.000000, K: 153.059626 
+ Maximum loglikelihood: -283.769398 
+    lambda mu        K    loglik df conv
+1 0.319641  0 153.0596 -283.7694  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -292.9422 
+The loglikelihood for the initial parameter values is -294.3377 
+
+ Maximum likelihood parameter estimates: lambda: 0.303949, mu: 0.000000, K: 165.107478 
+ Maximum loglikelihood: -282.922761 
+     lambda mu        K    loglik df conv
+1 0.3039488  0 165.1075 -282.9228  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -292.3404 
+
+ Maximum likelihood parameter estimates: lambda: 0.300306, mu: 0.000118, K: 162.494100 
+ Maximum loglikelihood: -285.318951 
+     lambda           mu        K   loglik df conv
+1 0.3003059 0.0001177794 162.4941 -285.319  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.320628, mu: 0.000221, K: 153.234361 
+ Maximum loglikelihood: -283.410939 
+     lambda           mu        K    loglik df conv
+1 0.3206285 0.0002206162 153.2344 -283.4109  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.306383, mu: 0.001017, K: 164.446661 
+ Maximum loglikelihood: -283.634490 
+     lambda          mu        K    loglik df conv
+1 0.3063829 0.001017156 164.4467 -283.6345  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -309.7909 
+The loglikelihood for the initial parameter values is -310.9449 
+
+ Maximum likelihood parameter estimates: lambda: 0.314650, mu: 0.000002, K: 157.599072 
+ Maximum loglikelihood: -283.064006 
+     lambda           mu        K   loglik df conv
+1 0.3146504 2.423127e-06 157.5991 -283.064  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -308.377 
+
+ Maximum likelihood parameter estimates: lambda: 0.310569, mu: 0.000001, K: 159.315580 
+ Maximum loglikelihood: -283.041317 
+     lambda           mu        K    loglik df conv
+1 0.3105695 5.869509e-07 159.3156 -283.0413  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -309.6747 
+
+ Maximum likelihood parameter estimates: lambda: 0.355575, mu: 0.005299, K: 145.379226 
+ Maximum loglikelihood: -283.194820 
+     lambda          mu        K    loglik df conv
+1 0.3555748 0.005298536 145.3792 -283.1948  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.324336, mu: 0.000021, K: 150.934229 
+ Maximum loglikelihood: -283.776930 
+     lambda           mu        K    loglik df conv
+1 0.3243362 2.063507e-05 150.9342 -283.7769  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.302417, mu: 0.000012, K: 156.835520 
+ Maximum loglikelihood: -287.464428 
+     lambda           mu        K    loglik df conv
+1 0.3024169 1.151744e-05 156.8355 -287.4644  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.303805, mu: 0.000003, K: 161.319810 
+ Maximum loglikelihood: -284.744314 
+     lambda           mu        K    loglik df conv
+1 0.3038052 3.032886e-06 161.3198 -284.7443  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -308.701 
+
+ Maximum likelihood parameter estimates: lambda: 0.308827, mu: 0.000003, K: 159.245430 
+ Maximum loglikelihood: -284.197548 
+     lambda           mu        K    loglik df conv
+1 0.3088274 3.426487e-06 159.2454 -284.1975  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.313285, mu: 0.000010, K: 154.780574 
+ Maximum loglikelihood: -284.652896 
+     lambda           mu        K    loglik df conv
+1 0.3132846 9.536761e-06 154.7806 -284.6529  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -309.282 
+
+ Maximum likelihood parameter estimates: lambda: 0.313719, mu: 0.000035, K: 155.353822 
+ Maximum loglikelihood: -284.232468 
+     lambda           mu        K    loglik df conv
+1 0.3137194 3.536167e-05 155.3538 -284.2325  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.318656, mu: 0.000001, K: 155.235598 
+ Maximum loglikelihood: -282.951016 
+    lambda           mu        K   loglik df conv
+1 0.318656 5.157163e-07 155.2356 -282.951  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -311.9959 
+The loglikelihood for the initial parameter values is -314.4561 
+The loglikelihood for the initial parameter values is -309.5256 
+
+ Maximum likelihood parameter estimates: lambda: 0.320235, mu: 0.001002, K: 155.377776 
+ Maximum loglikelihood: -282.739179 
+     lambda          mu        K    loglik df conv
+1 0.3202351 0.001002325 155.3778 -282.7392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.305370, mu: 0.000002, K: 163.860624 
+ Maximum loglikelihood: -282.829809 
+   lambda           mu        K    loglik df conv
+1 0.30537 2.431261e-06 163.8606 -282.8298  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -309.5454 
+The loglikelihood for the initial parameter values is -312.3629 
+The loglikelihood for the initial parameter values is -311.3 
+The loglikelihood for the initial parameter values is -310.0435 
+
+ Maximum likelihood parameter estimates: lambda: 0.304691, mu: 0.000000, K: 163.925554 
+ Maximum loglikelihood: -283.225855 
+     lambda           mu        K    loglik df conv
+1 0.3046908 3.749371e-07 163.9256 -283.2259  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -308.612 
+
+ Maximum likelihood parameter estimates: lambda: 0.307543, mu: 0.000001, K: 162.238331 
+ Maximum loglikelihood: -283.000647 
+     lambda           mu        K    loglik df conv
+1 0.3075434 9.657632e-07 162.2383 -283.0006  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -306.8907 
+
+ Maximum likelihood parameter estimates: lambda: 0.304372, mu: 0.000004, K: 164.009655 
+ Maximum loglikelihood: -283.195665 
+     lambda           mu        K    loglik df conv
+1 0.3043719 3.688927e-06 164.0097 -283.1957  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.309830, mu: 0.000007, K: 160.464460 
+ Maximum loglikelihood: -283.243462 
+   lambda           mu        K    loglik df conv
+1 0.30983 7.123255e-06 160.4645 -283.2435  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -307.0337 
+The loglikelihood for the initial parameter values is -307.5642 
+The loglikelihood for the initial parameter values is -306.9744 
+The loglikelihood for the initial parameter values is -308.0389 
+
+ Maximum likelihood parameter estimates: lambda: 0.303229, mu: 0.000013, K: 165.486443 
+ Maximum loglikelihood: -282.923008 
+     lambda          mu        K   loglik df conv
+1 0.3032292 1.31843e-05 165.4864 -282.923  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -306.3817 
+[1] "Analyses with the diversity-dependent (DDD) models completed ! Check your results in the working directory."
+[1] 1
+[1] 2
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K [1]
+ 3You are fixing
+ mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+[1] 4
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+[1] 5
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+[1] 6
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 7
+[1] "Linear dependence of speciation rate without extinction"
+[1] 8
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 9
+[1] "Linear dependence of speciation rate without extinction"
+[1] 10
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 11
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+[1]You are fixing mu 
+ 12
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 13
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 14
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 15
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 16
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 17
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 18
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 19
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 20
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -90.8509 
+The loglikelihood for the initial parameter values is -90.9608 
+The loglikelihood for the initial parameter values is The loglikelihood for the initial parameter values is -92.01357 
+-92.01357 
+The loglikelihood for the initial parameter values is -90.80229 
+The loglikelihood for the initial parameter values is -90.80229 
+The loglikelihood for the initial parameter values is -90.7145 
+The loglikelihood for the initial parameter values is -92.01357 
+The loglikelihood for the initial parameter values is -90.9608 
+The loglikelihood for the initial parameter values is -90.96974 
+The loglikelihood for the initial parameter values is -91.06802 
+The loglikelihood for the initial parameter values is -90.9608 
+The loglikelihood for the initial parameter values is -90.8509 
+The loglikelihood for the initial parameter values is -91.06802 
+The loglikelihood for the initial parameter values is -90.80229 
+The loglikelihood for the initial parameter values is -90.98032 
+The loglikelihood for the initial parameter values is -90.8509 
+The loglikelihood for the initial parameter values is -90.80229 
+The loglikelihood for the initial parameter values is -90.80229 
+The loglikelihood for the initial parameter values is -90.98032 
+
+ Maximum likelihood parameter estimates: lambda: 0.167839, mu: 0.000000, K: 89.829284 
+ Maximum loglikelihood: -85.423246 
+     lambda mu        K    loglik df conv
+1 0.1678393  0 89.82928 -85.42325  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.167839, mu: 0.000000, K: 89.829284 
+ Maximum loglikelihood: -85.423246 
+     lambda mu        K    loglik df conv
+1 0.1678393  0 89.82928 -85.42325  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -85.44053 
+The loglikelihood for the initial parameter values is -85.44053 
+
+ Maximum likelihood parameter estimates: lambda: 0.169486, mu: 0.000000, K: 87.618517 
+ Maximum loglikelihood: -85.430068 
+     lambda mu        K    loglik df conv
+1 0.1694857  0 87.61852 -85.43007  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.169486, mu: 0.000000, K: 87.618517 
+ Maximum loglikelihood: -85.430068 
+     lambda mu        K    loglik df conv
+1 0.1694857  0 87.61852 -85.43007  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.169486, mu: 0.000000, K: 87.618517 
+ Maximum loglikelihood: -85.430068 
+     lambda mu        K    loglik df conv
+1 0.1694857  0 87.61852 -85.43007  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -85.45287 
+The loglikelihood for the initial parameter values is -85.45287 
+The loglikelihood for the initial parameter values is -85.45287 
+
+ Maximum likelihood parameter estimates: lambda: 0.173492, mu: 0.000000, K: 79.298531 
+ Maximum loglikelihood: -85.494178 
+    lambda mu        K    loglik df conv
+1 0.173492  0 79.29853 -85.49418  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.173492, mu: 0.000000, K: 79.298531 
+ Maximum loglikelihood: -85.494178 
+    lambda mu        K    loglik df conv
+1 0.173492  0 79.29853 -85.49418  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.173492, mu: 0.000000, K: 79.298531 
+ Maximum loglikelihood: -85.494178 
+    lambda mu        K    loglik df conv
+1 0.173492  0 79.29853 -85.49418  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.173492, mu: 0.000000, K: 79.298531 
+ Maximum loglikelihood: -85.494178 
+    lambda mu        K    loglik df conv
+1 0.173492  0 79.29853 -85.49418  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.173492, mu: 0.000000, K: 79.298531 
+ Maximum loglikelihood: -85.494178 
+    lambda mu        K    loglik df conv
+1 0.173492  0 79.29853 -85.49418  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -85.55181 
+The loglikelihood for the initial parameter values is -85.55181 
+The loglikelihood for the initial parameter values is -85.55181 
+The loglikelihood for the initial parameter values is -85.55181 
+The loglikelihood for the initial parameter values is -85.55181 
+
+ Maximum likelihood parameter estimates: lambda: 0.178310, mu: 0.000000, K: 68.744790 
+ Maximum loglikelihood: -85.957229 
+     lambda mu        K    loglik df conv
+1 0.1783104  0 68.74479 -85.95723  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.178310, mu: 0.000000, K: 68.744790 
+ Maximum loglikelihood: -85.957229 
+     lambda mu        K    loglik df conv
+1 0.1783104  0 68.74479 -85.95723  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.178310, mu: 0.000000, K: 68.744790 
+ Maximum loglikelihood: -85.957229 
+     lambda mu        K    loglik df conv
+1 0.1783104  0 68.74479 -85.95723  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -86.03266 
+The loglikelihood for the initial parameter values is -86.03266 
+
+ Maximum likelihood parameter estimates: lambda: 0.168995, mu: 0.000000, K: 72.757829 
+ Maximum loglikelihood: -86.926445 
+     lambda mu        K    loglik df conv
+1 0.1689955  0 72.75783 -86.92645  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -86.03266 
+The loglikelihood for the initial parameter values is -86.70867 
+
+ Maximum likelihood parameter estimates: lambda: 0.168995, mu: 0.000000, K: 72.757829 
+ Maximum loglikelihood: -86.926445 
+     lambda mu        K    loglik df conv
+1 0.1689955  0 72.75783 -86.92645  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.168995, mu: 0.000000, K: 72.757829 
+ Maximum loglikelihood: -86.926445 
+     lambda mu        K    loglik df conv
+1 0.1689955  0 72.75783 -86.92645  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -86.70867 
+The loglikelihood for the initial parameter values is -86.70867 
+
+ Maximum likelihood parameter estimates: lambda: 0.177725, mu: 0.000000, K: 71.397492 
+ Maximum loglikelihood: -85.700515 
+     lambda mu        K    loglik df conv
+1 0.1777251  0 71.39749 -85.70052  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -85.80544 
+
+ Maximum likelihood parameter estimates: lambda: 0.177638, mu: 0.000000, K: 68.726239 
+ Maximum loglikelihood: -86.087222 
+     lambda mu        K    loglik df conv
+1 0.1776382  0 68.72624 -86.08722  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -86.13381 
+
+ Maximum likelihood parameter estimates: lambda: 0.167127, mu: 0.000000, K: 92.289924 
+ Maximum loglikelihood: -85.392020 
+     lambda mu        K    loglik df conv
+1 0.1671273  0 92.28992 -85.39202  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -85.37997 
+
+ Maximum likelihood parameter estimates: lambda: 0.167127, mu: 0.000000, K: 92.289924 
+ Maximum loglikelihood: -85.392020 
+     lambda mu        K    loglik df conv
+1 0.1671273  0 92.28992 -85.39202  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -85.37997 
+
+ Maximum likelihood parameter estimates: lambda: 0.363501, mu: 0.108484, K: 34.939463 
+ Maximum loglikelihood: -85.621256 
+     lambda        mu        K    loglik df conv
+1 0.3635011 0.1084841 34.93946 -85.62126  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.363501, mu: 0.108484, K: 34.939463 
+ Maximum loglikelihood: -85.621256 
+     lambda        mu        K    loglik df conv
+1 0.3635011 0.1084841 34.93946 -85.62126  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.363501, mu: 0.108484, K: 34.939463 
+ Maximum loglikelihood: -85.621256 
+     lambda        mu        K    loglik df conv
+1 0.3635011 0.1084841 34.93946 -85.62126  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.376487, mu: 0.121823, K: 34.610013 
+ Maximum loglikelihood: -85.136426 
+     lambda        mu        K    loglik df conv
+1 0.3764873 0.1218227 34.61001 -85.13643  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.376487, mu: 0.121823, K: 34.610013 
+ Maximum loglikelihood: -85.136426 
+     lambda        mu        K    loglik df conv
+1 0.3764873 0.1218227 34.61001 -85.13643  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.376487, mu: 0.121823, K: 34.610013 
+ Maximum loglikelihood: -85.136426 
+     lambda        mu        K    loglik df conv
+1 0.3764873 0.1218227 34.61001 -85.13643  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.376487, mu: 0.121823, K: 34.610013 
+ Maximum loglikelihood: -85.136426 
+     lambda        mu        K    loglik df conv
+1 0.3764873 0.1218227 34.61001 -85.13643  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.376487, mu: 0.121823, K: 34.610013 
+ Maximum loglikelihood: -85.136426 
+     lambda        mu        K    loglik df conv
+1 0.3764873 0.1218227 34.61001 -85.13643  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -90.07269 
+The loglikelihood for the initial parameter values is -90.07269 
+The loglikelihood for the initial parameter values is -90.07269 
+The loglikelihood for the initial parameter values is -88.9186 
+The loglikelihood for the initial parameter values is -88.9186 
+The loglikelihood for the initial parameter values is -88.9186 
+The loglikelihood for the initial parameter values is -88.9186 
+The loglikelihood for the initial parameter values is -88.9186 
+
+ Maximum likelihood parameter estimates: lambda: 0.521860, mu: 0.152909, K: 32.236928 
+ Maximum loglikelihood: -86.148465 
+   lambda        mu        K    loglik df conv
+1 0.52186 0.1529093 32.23693 -86.14846  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.521860, mu: 0.152909, K: 32.236928 
+ Maximum loglikelihood: -86.148465 
+   lambda        mu        K    loglik df conv
+1 0.52186 0.1529093 32.23693 -86.14846  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.521860, mu: 0.152909, K: 32.236928 
+ Maximum loglikelihood: -86.148465 
+   lambda        mu        K    loglik df conv
+1 0.52186 0.1529093 32.23693 -86.14846  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.349388, mu: 0.105840, K: 35.642184 
+ Maximum loglikelihood: -85.403929 
+     lambda        mu        K    loglik df conv
+1 0.3493878 0.1058395 35.64218 -85.40393  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -90.91465 
+The loglikelihood for the initial parameter values is -90.91465 
+The loglikelihood for the initial parameter values is -90.91465 
+
+ Maximum likelihood parameter estimates: lambda: 0.405512, mu: 0.135694, K: 33.844191 
+ Maximum loglikelihood: -84.992497 
+     lambda        mu        K   loglik df conv
+1 0.4055122 0.1356943 33.84419 -84.9925  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.405512, mu: 0.135694, K: 33.844191 
+ Maximum loglikelihood: -84.992497 
+     lambda        mu        K   loglik df conv
+1 0.4055122 0.1356943 33.84419 -84.9925  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -89.59536 
+
+ Maximum likelihood parameter estimates: lambda: 0.370958, mu: 0.110888, K: 34.677512 
+ Maximum loglikelihood: -85.715197 
+     lambda        mu        K   loglik df conv
+1 0.3709585 0.1108877 34.67751 -85.7152  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.423636, mu: 0.143512, K: 33.446268 
+ Maximum loglikelihood: -84.903037 
+     lambda        mu        K    loglik df conv
+1 0.4236364 0.1435124 33.44627 -84.90304  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -88.48524 
+The loglikelihood for the initial parameter values is -88.48524 
+
+ Maximum likelihood parameter estimates: lambda: 0.423636, mu: 0.143512, K: 33.446268 
+ Maximum loglikelihood: -84.903037 
+     lambda        mu        K    loglik df conv
+1 0.4236364 0.1435124 33.44627 -84.90304  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -90.23774 
+The loglikelihood for the initial parameter values is -88.28385 
+The loglikelihood for the initial parameter values is -88.28385 
+
+ Maximum likelihood parameter estimates: lambda: 0.401887, mu: 0.134052, K: 33.931528 
+ Maximum loglikelihood: -85.009805 
+     lambda       mu        K   loglik df conv
+1 0.4018871 0.134052 33.93153 -85.0098  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.401887, mu: 0.134052, K: 33.931528 
+ Maximum loglikelihood: -85.009805 
+     lambda       mu        K   loglik df conv
+1 0.4018871 0.134052 33.93153 -85.0098  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.401887, mu: 0.134052, K: 33.931528 
+ Maximum loglikelihood: -85.009805 
+     lambda       mu        K   loglik df conv
+1 0.4018871 0.134052 33.93153 -85.0098  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -88.5301 
+The loglikelihood for the initial parameter values is -88.5301 
+The loglikelihood for the initial parameter values is -88.5301 
+[1] "Analyses with the diversity-dependent (DDD) models completed ! Check your results in the working directory."
+[1] 1
+[1] 2
+[1] "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda[1] K 
+ 3
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 4
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+[1]You are fixing mu  5
+
+Optimizing the likelihood - this may take a while. 
+[1] 6
+[1] "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 7
+[1] 8
+[1] "Linear dependence of speciation rate without extinction"
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 9
+[1] 10
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 11
+[1][1] 12
+ "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 13
+[1] "Linear dependence of speciation rate without extinction"
+[1] 14
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 15
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda [1]K 
+ 16
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 17
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 18
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 19
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+[1] 20
+[1] "Linear dependence of speciation rate without extinction"
+You are optimizing lambda K 
+You are fixing mu 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+The loglikelihood for the initial parameter values is -40.3499 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -45.99735 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+ [1]    lambda mu        K "Linear dependence of speciation rate with extinction"   loglik
+ df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1]
+  "Linear dependence of speciation rate with extinction"Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015
+ 
+ Maximum loglikelihood: -40.215396 
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -45.99735 
+The loglikelihood for the initial parameter values is -45.99735 
+The loglikelihood for the initial parameter values is -45.99735 
+The loglikelihood for the initial parameter values is The loglikelihood for the initial parameter values is-45.99735  
+-45.99735 
+The loglikelihood for the initial parameter values is -45.99735 
+The loglikelihood for the initial parameter values is -45.99735 
+The loglikelihood for the initial parameter values is -45.99735 
+The loglikelihood for the initial parameter values is -45.99735 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+The loglikelihood for the initial parameter values is -45.99735 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -45.99735 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+The loglikelihood for the initial parameter values is -45.99735 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+You are optimizing[1] lambda mu "Linear dependence of speciation rate with extinction" 
+K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.261174, mu: 0.000000, K: 16.000015 
+ Maximum loglikelihood: -40.215396 
+     lambda mu        K   loglik df conv
+1 0.2611741  0 16.00002 -40.2154  2    0
+[1] "Linear dependence of speciation rate with extinction"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -45.99735 
+The loglikelihood for the initial parameter values is -45.99735 
+The loglikelihood for the initial parameter values is -45.99735 
+The loglikelihood for the initial parameter values is -45.99735 
+The loglikelihood for the initial parameter values is -45.99735 
+The loglikelihood for the initial parameter values is -45.99735 
+The loglikelihood for the initial parameter values is -45.99735 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916
+  
+Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv 
+1    lambda 0.2437871           mu 7.819994e-05        K 15.97618    loglik -40.27392 df  3 conv    0
+1
+ 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are optimizing You are fixinglambda  nothingmu  
+K Optimizing the likelihood - this may take a while.
+ 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.243787, mu: 0.000078, K: 15.976179 
+ Maximum loglikelihood: -40.273916 
+     lambda           mu        K    loglik df conv
+1 0.2437871 7.819994e-05 15.97618 -40.27392  3    0
+[1] "Linear dependence of extinction rate"
+You are optimizing lambda mu K 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+The loglikelihood for the initial parameter values is -61.0156 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -46.61913 
+The loglikelihood for the initial parameter values is -46.61913 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -46.61913 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -46.61913 
+The loglikelihood for the initial parameter values is -46.61913 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -46.61913 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -46.61913 
+The loglikelihood for the initial parameter values is -46.61913 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+The loglikelihood for the initial parameter values is -46.61913 
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -46.61913 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -46.61913 
+The loglikelihood for the initial parameter values is -46.61913 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -46.61913 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+ 
+     lambda            muMaximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975        K     loglik
+ df  convMaximum loglikelihood: -45.997707
+1  0.06450061
+ 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -46.61913 
+The loglikelihood for the initial parameter values is -46.61913 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -46.61913 
+The loglikelihood for the initial parameter values is -46.61913 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -46.61913 
+The loglikelihood for the initial parameter values is -46.61913 
+
+ Maximum likelihood parameter estimates: lambda: 0.064501, mu: 0.000013, K: 24064.373975 
+ Maximum loglikelihood: -45.997707 
+      lambda           mu        K    loglik df conv
+1 0.06450061 1.294174e-05 24064.37 -45.99771  3    0
+[1] "Linear dependence of speciation and extinction rates"
+You are optimizing lambda mu K r 
+You are fixing nothing 
+Optimizing the likelihood - this may take a while. 
+The loglikelihood for the initial parameter values is -46.61913 
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+
+ Maximum likelihood parameter estimates: lambda: 0.260241, mu: 0.000000, K: 16.000000, r: 0.000145 
+ Maximum loglikelihood: -40.220063 
+     lambda          mu  K            r    loglik df conv
+1 0.2602409 2.04691e-07 16 0.0001454386 -40.22006  4    0
+[1] "Analyses with the diversity-dependent (DDD) models completed ! Check your results in the working directory."
+                                                                                           trees/ftree632.nex 
+"Analyses with the diversity-dependent (DDD) models completed ! Check your results in the working directory." 
+                                                                                           trees/ftree635.nex 
+"Analyses with the diversity-dependent (DDD) models completed ! Check your results in the working directory." 
+                                                                                           trees/ftree641.nex 
+"Analyses with the diversity-dependent (DDD) models completed ! Check your results in the working directory." 
+                                                                                           trees/ftree768.nex 
+"Analyses with the diversity-dependent (DDD) models completed ! Check your results in the working directory." 
+                                                                                           trees/ftree912.nex 
+"Analyses with the diversity-dependent (DDD) models completed ! Check your results in the working directory." 
+> 
