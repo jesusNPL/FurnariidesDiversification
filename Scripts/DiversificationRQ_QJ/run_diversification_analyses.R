@@ -558,11 +558,11 @@ run_DDD<-function(tree_file, total_richness=Ntip(tree_file), number_of_trees=1)
         resi<-10*(total_richness)
 
         print("Linear dependence of speciation rate without extinction")
-        DDD_1<-dd_ML(brtsi, ddmodel=1, initparsopt=c(0.3, total_richness), idparsopt=c(1,3), idparsfix=c(2), parsfix=c(0), res=resi, missnumspec=missing.lineages, tol = c(1E-3, 1E-4, 1E-6), maxiter = 100000, optimmethod = 'subplex', cond=1, btorph=1, soc=2)
+        DDD_1<-dd_ML(brtsi, ddmodel=1, initparsopt=c(0.3, total_richness), idparsopt=c(1,3), idparsfix=c(2), parsfix=c(0), res=resi, missnumspec=missing.lineages, tol = c(1E-3, 1E-4, 1E-6), maxiter = 100000, optimmethod = 'simplex', cond=1, btorph=1, soc=2)
         print(DDD_1)
 
         print("Linear dependence of speciation rate with extinction")
-        DDD_2<-dd_ML(brtsi, ddmodel=1, initparsopt=c(0.3,0.1, total_richness), res=resi, missnumspec=missing.lineages, tol = c(1E-3, 1E-4, 1E-6), maxiter = 100000, optimmethod = 'subplex', cond=1, btorph=1, soc=2)
+        DDD_2<-dd_ML(brtsi, ddmodel=1, initparsopt=c(0.3,0.1, total_richness), res=resi, missnumspec=missing.lineages, tol = c(1E-3, 1E-4, 1E-6), maxiter = 100000, optimmethod = 'simplex', cond=1, btorph=1, soc=2)
         print(DDD_2)
 
         # print("Exponential dependence of speciation rate with extinction")
@@ -570,7 +570,7 @@ run_DDD<-function(tree_file, total_richness=Ntip(tree_file), number_of_trees=1)
         # 	print(DDD_3)
 
         print("Linear dependence of extinction rate")
-        DDD_4<-dd_ML(brtsi, ddmodel=3, initparsopt=c(0.3,0.1, total_richness), res=resi, missnumspec=missing.lineages, tol = c(1E-3, 1E-4, 1E-6), maxiter = 100000, optimmethod = 'subplex', cond=1, btorph=1, soc=2)
+        DDD_4<-dd_ML(brtsi, ddmodel=3, initparsopt=c(0.3,0.1, total_richness), res=resi, missnumspec=missing.lineages, tol = c(1E-3, 1E-4, 1E-6), maxiter = 100000, optimmethod = 'simplex', cond=1, btorph=1, soc=2)
         print(DDD_4)
 
         # print("Exponential dependence of extinction rate")
@@ -578,7 +578,7 @@ run_DDD<-function(tree_file, total_richness=Ntip(tree_file), number_of_trees=1)
         # print(DDD_5)
 
         print("Linear dependence of speciation and extinction rates")
-        DDD_6<-dd_ML(brtsi, ddmodel=5, initparsopt=c(0.5,0.1, total_richness,0.001), res=resi, missnumspec=missing.lineages, tol = c(1E-3, 1E-4, 1E-6), maxiter = 100000, optimmethod = 'subplex', cond=1, btorph=1, soc=2)
+        DDD_6<-dd_ML(brtsi, ddmodel=5, initparsopt=c(0.5,0.1, total_richness,0.001), res=resi, missnumspec=missing.lineages, tol = c(1E-3, 1E-4, 1E-6), maxiter = 100000, optimmethod = 'simplex', cond=1, btorph=1, soc=2)
         print(DDD_6)
 
         ############# RESULTS ###########################################
