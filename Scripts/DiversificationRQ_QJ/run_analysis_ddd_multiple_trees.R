@@ -7,7 +7,7 @@ path_trees = c(#"trees/ftree627.nex",
                #"trees/ftree635.nex",
                #"trees/ftree641.nex",
                "trees/ftree768.nex",
-               "trees/ftree912.nex")
+               #"trees/ftree912.nex")
 
 ## Number of tips per subtree
 tree_sizes = sapply(path_trees, function(x){
