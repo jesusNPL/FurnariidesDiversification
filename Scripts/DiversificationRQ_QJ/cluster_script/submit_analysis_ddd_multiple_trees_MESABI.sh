@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#PBS -l walltime=96:00:00,nodes=1:ppn=24,mem=32gb
+#PBS -l walltime=96:00:00,nodes=1:ppn=12,mem=24gb
 #PBS -N j
 #PBS -m abe
 #PBS -M meireles@umn.edu
